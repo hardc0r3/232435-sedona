@@ -2,18 +2,16 @@
   outline: 1px solid red;
 }*/
 body {
-  font-family: "PT sans",sans-serif;
+  font-family: "PT sans Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-weight: normal;
   color:#000000;
-  padding: 0;
-  margin: 0;
+  text-transform: uppercase;
 }
 .wrapper {
-position: relative;
-width: 1200px;
-margin: 0 auto;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 /* З А Г О Л О В К И */
@@ -21,13 +19,12 @@ margin: 0 auto;
 .title {
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 .reason-title {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .question {
   font-size: 30px;
@@ -37,10 +34,9 @@ margin: 0 auto;
   font-size: 14px;
   line-height: 21px;
   color:#333333;
-  text-transform: uppercase;
 }
-.reason-date {
-  line-height: 24px;
+.header-title p {
+  line-height: 26px;
 }
 .clearfix::after {
   content: "";
@@ -52,437 +48,646 @@ margin: 0 auto;
 
 .main-header {
   position: relative;
-  height: 56px;
-  font-size: 0;
-  width: 1200px;
 }
-li a {
+.navigation-item a {
+  font-family: "PT sans", "Arial", sans-serif;
   font-size: 14px;
   color: #000000;
-  vertical-align: middle;
   text-decoration: none;
+  line-height: 26px;
+  font-weight: bold;
 }
 .logo {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
 }
-ul {
+.main-navigation ul {
   padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
 }
 li:nth-child(2) {
   margin-right: 20%;
 }
-.navigation-item {
+.navigation-item  {
   box-sizing: border-box;
   display:inline-block;
   text-align: center;
   width: 20%;
-  font-size: 14px;
-  font-weight: bold;
-  color: black;
-  text-transform: uppercase;
-  height: 56px;
-  vertical-align: middle; /* почему не выравнивается по центру?*/
+  vertical-align: top;
+  padding: 15px 15px;
 }
 
 /*P R O M O*/
 
 .promo {
-  background-image: url("../img/bg-photo-index.jpg");
-  background-repeat:no-repeat;
-  height:600px;
+  background: url("../img/bg-photo-index.jpg") no-repeat;
+  height:428px;
   padding-top: 76px;
 }
 .promo-image img {
   display: block;
   margin: 0 auto;
+  width: 458px;
+  height: 352px;
 }
 article {
   text-align: center;
 }
 .header-title {
   display: inline-block;
-  height: 216px;
   text-align: center;
+  padding: 62px 330px 55px;
+  vertical-align: top;
 }
-.header-title h1 {
-  margin-top: 65px;
-  margin-bottom: 30px;
-  width: 636px;
-  height: 50px;
+.title {
+  margin-bottom: 33px;
 }
 .reason-row {
-  min-height:256px;
-  font-size: 0; /*появляется какое-то свободное место снизу,не понятно откуда оно?*/
-  margin: 0;
-  padding: 0;
+  font-size: 0; /* нужно ли здесь это свойство*/
 }
 .reason-row-icon {
-height: 330px;
-font-size: 0;
+  font-size: 0; /* нужно ли здесь это свойство*/
+}
+.reason-row--blue {
+  height: 256px;
+  color: #ffffff;
+  background-color: #81b3d2;
 }
 .reason {
   display: inline-block;
-  width: 400px;
-  height: 256px;
+  width: 300px;
   text-align: center;
+  vertical-align: middle;
+  padding: 40px 50px;
+}
+.reason-number {
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.reason .reason-title{
+  margin-bottom: 25px;
   font-size: 21px;
-  text-transform: uppercase;
+  line-height: 26px;
 }
-.reason h2 {
-  font-size: 21px;  /*почему если применить размер только к .reason - h2 не меняет внещний вид? приходится писать отдельно*/
-}
-.reason-image {
-  float: right; /*пришлось сделать новый класс для второй картинки,чтобы зафлоатить ее влево,как по-другому сделать?*/
-}
-.reason-icon--house {
-  display:inline-block;
-  background-image: url("../img/reason-icon--house.png");
-  background-repeat:no-repeat;
-  background-position: 50% 10%;
-  text-align:center;
-  height: 330px;
-}
-.reason-icon--food {
-  display:inline-block;
-  background-image: url("../img/reason-icon--food.png");
-  background-repeat:no-repeat;
-  background-position: 50% 10%;
-  text-align:center;
-  height: 330px;
-  }
-.reason-icon--souvenirs {
-  display:inline-block;
-  background-image: url("../img/reason-icon--souvenirs.png");
-  background-repeat:no-repeat;
-  background-position: 50% 10%;
-  text-align:center;
-  height: 330px;
-}
-.image-right {
-  float:left;
+.reason-row--blue .reason-description {
+  color: #ffffff;
 }
 .reason-row--grey {
-  text-align: left;
-  font-size: 0;
+  background-color: #eeeeee;
+}
+.reason .reason-description {
+  font-size: 14px;
+  line-height: 21px;
+}
+.reason-image {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding:0;
   height: 256px;
+  width: 800px;
 }
-.reason-row--grey .reason {
-display: block;
-float: left;
+.reason-icon--house {
+  position: relative;
+  padding-bottom: 85px;
 }
+.reason-icon--house .reason-title {
+  margin-top: 150px;
+  margin-bottom: 28px;
+}
+.reason-icon--house::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 162px;
+  width: 75px;
+  height: 72px;
+  background: url("../img/reason-icon--house.png") no-repeat;
+}
+.reason-icon--food .reason-title {
+  margin: 0;
+  margin-top: 150px;
+  margin-bottom: 28px;
+}
+.reason-icon--food {
+  position: relative;
+  padding-bottom: 85px;
+}
+.reason-icon--food::before {
+  content: "";
+  position: absolute;
+  top: 61px;
+  left: 163px;
+  width: 74px;
+  height: 70px;
+  background: url("../img/reason-icon--food.png") no-repeat;
+}
+.reason-icon--souvenirs .reason-title {
+  margin-top: 150px;
+  margin-bottom: 28px;
+}
+.reason-icon--souvenirs {
+  position: relative;
+  padding-bottom: 85px;
+}
+.reason-icon--souvenirs::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: 168px;
+  width: 64px;
+  height: 76px;
+  background: url("../img/reason-icon--souvenirs.png") no-repeat;
+}
+
 
 /*S E A R C H*/
 
 .search {
-  display: block;
-  height: 241px;
   text-align: center;
-  padding: 50px;
+  padding-top: 55px;
+}
+.question {
+  margin-bottom: 30px;
+}
+.search .reason-description {
+  line-height: 24px;
 }
 .search-btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", sans-serif;
   display: inline-block;
+  text-align: center;
+  vertical-align: middle;
   width: 568px;
-  height: 86px;
   background-color: #766357;
-  color: white;
-  margin-top: 30px
-}  /*Не выравнивается кнопка, vertical-align не работает*/
-.content {
-  margin-bottom: -25px;
+  color: #ffffff;
+  padding: 30px 0;
+  margin-top: 50px;
 }
 .map {
+  position: relative;
   background-image: url("../img/map.jpg");
   width: 1200px ;
-  height: 884px;
-  margin: 0;
-  padding: 0;
+  height: 593px;
 }
 
 /* Ф О Р М А*/
 
 .form {
-  font-size: 0;
   box-sizing: border-box;
   position: absolute;
   width: 568px;
   height: 395px;
-  background-color: white;
+  background-color: #ffffff;
   transform: translateX(-50%);
   left: 50%;
   padding: 55px;
-  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
   font-weight: bold;
+  top: 0;
 }
 .form-line {
-  height: 38px;
-  width: 100%;
-  margin-bottom: 29px;
-  font-size: 14px;
-}
-input[type=text] {
   box-sizing: border-box;
+  margin-bottom: 29px;
+  text-align: left;
+}
+.form-line input[type=text] {
+  border: none;
+  outline: none;
   background-color: #f2f2f2;
   font-weight: inherit;
-  width: 346px;
-  height: 38px;
-  float:right;
+  width: 316px;
+  float: right;
+  padding: 8px 15px;
+  margin-left: 18px;
 }
-label {
-  margin-top: 8px; /*выровняли вручную, как сделать автоматически расскажи */
+.form-line label {
+  padding: 8px 0px; /*выровняли вручную, как сделать автоматически расскажи */
   display: inline-block;
-  width: 110px;
+}
+.data-numbers input[type=text] {
+  border: none;
+  outline: none;
+  display: block;
+  width: 8px;
+  padding: 6px 15px;
 }
 .adult-data {
-  display: inline-block;
+  width: 225px;
+  float: left;
 }
 .child-data {
-  display: inline-block;
+  width: 225px;
+  float: right;
 }
-.data-numbers { /*пришлось сделать еще один див,чтобы разместить поле input и кнопки справа,как по-другому?*/
+.data-numbers {
+  margin-top: 2px;
   float: right;
 }
 .minus {
-  float:left;
+  border: none;
+  outline: none;
   width: 38px;
   height: 38px;
+  float: left;
 }
-#adult {
-  text-align: center;
-  float:left;
-  width: 38px;
+.data-numbers input[type=text] {
+  float: left;
+  margin: 0;
 }
 .plus {
-  float:left;
+  border: none;
+  outline: none;
   width: 38px;
   height: 38px;
+  float: left;
 }
-#child {
-  text-align: center;
-  float:left;
-  width: 38px;
+.child-data label {
+  margin-left: 50px;
 }
 .btn-find {
+  display: inline-block;
+  text-transform: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
   background-color: #81b3d2;
-  width: 458px;
-  height: 58px;
-  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
   color: #ffffff;
-  margin-top: 25px;
+  width: 458px;
+  padding: 16px 0;
+  margin-top: 21px;
 }
 
 /*F I L T E R S*/
+
 .filters-row {
-  width: 1060px;
+  font-family: "PT Sans", sans-serif;
   height: 177px;
   background-image: url("../img/filterbackground.jpg"); /* не вытягивается на полный размер, остается незекрытый кусок*/
   background-repeat: no-repeat;
-  padding: 20px 70px;
-  text-transform: uppercase;
+  padding: 28px 72px;
   color: #ffffff;
+  font-weight: bold;
+  font-size:16px;
+  line-height:21px;
 }
 .filters-options {
-  width: 180px;
+  width: 160px;
   float:left;
+  margin-right: 90px;
 }
-
-.price {
-  width: 327px;
+.filters-title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+.filters-list {
+  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.filters-item input {
+  margin-right: 19px;
+  margin-bottom: 23px;
+}
+.filter-range {
+  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
   float:right;
-  padding-bottom: 15px;
-  text-align: center;
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: normal;
 }
-
-.enter-price {
-  border: 2px solid #ffffff;
-  text-align: center;
-  height: 35px;
-  width: 155px;
-  float:right;
+.filter-range-title {
+  font-weight: bold;
+  margin-bottom: 9px;
+  font-size:16px;
+  line-height:21px;
 }
-.enter-price input {
-  width: 55px;
-  height: 20px;
-}
-.enter-price:last-child {
-  margin-left: 2px;
-}
-.enter-price label {
-  text-align: center;
-}
-.scroll {
-  width: 310px;
-  margin-top: 10px;
-  text-align: center;
+.price-controls {
+  position: relative;
+  height: 36px;
   margin-bottom: 20px;
-}
-.show-button {
-  width: 133px;
-  height: 32px;
-  text-align: center;
   border: 2px solid #ffffff;
+  border-radius: 2px;
+  font-size: 0;
+  margin-left: 10px;
 }
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.price-controls label {
+  font-family: inherit;
+  font-weight: inherit;
+  display: inline-block;
+  font-size:14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.price-controls input {
+  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: inherit;
+  width: 50px;
+  margin: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 80%;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+ /*Р Е З У Л Ь Т А Т Ы     П О И С К А*/
+
 .results-row {
   font-size: 0;
-  height: 26px;
-  padding: 30px 70px;
-  text-align: left;
-}
-.sort-list {
-font-size: 0;
-display: inline-block;
-width: 300px;
-margin-left: 30px;
-text-align: center; /*почему li и .sort находится на разных уровнях и не дает себя центрировать?*/
+  padding: 32px 72px; /*почему в ФШ показывает одно расстояние padding, а в браузере по факту получается другое?*/
 }
 .search-results {
-font-size: 21px;
-font-weight: bold;
-display: inline-block;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 48px;
 }
 .sort {
   font-size: 12px;
-  font-weight: bold;
+  line-height: 18px;
   display: inline-block;
-  margin-left: 50px;
+  vertical-align: bottom;
+  margin-right: 40px;
 }
-.arrow {
-  text-align: center;
-  padding-top: 10px;
-  float:right;
-  width: 65px;
-  height: 40px;
-}
-.sort-list ul {
-  width: 500px;
-  background-color: red;
+.sort-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  display: inline-block;
+  vertical-align: bottom;
 }
 .sort-list li {
-margin-right: 20px;
-display: inline-block;
+  display: inline-block;
+  margin-right: 32px;
 }
+.sort-list a {
+  vertical-align: bottom;
+  text-decoration: none;
+  color: #b1b1b1;
+  border-bottom: 1px dotted #81b3d2;
+}
+.active a {
+  color: #81b3d2;
+  border-bottom: none;
+}
+.arrow {
+  float:right;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*О Т Е Л И*/
+
 .hotel {
-  height: 100px;
+  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
   border-top: 1px solid #e5e5e5;
-  padding: 25px 72px;
+  padding: 30px 72px;
 }
-.hotel:last-child {   /*почему не работает нижняя граница? */
+.hotel:nth-child(3n) {
   border-bottom: 1px solid #e5e5e5;
 }
-.hotel-image {
+.hotel-image img {
   float:left;
+  width: 135px;
+  height: 90px;
 }
 .hotel-content {
-  width:300px;
-  height:95px;
   float:left;
   margin-left: 30px;
-  text-transform: uppercase;
 }
-.hotel-content h2 {
+.hotel-title {  /*Как выровнять ХОТЕЛТАЙТОЛ и КНОПОЩКЕ*/
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 3px; /*РАЗМЕРЫ НЕ АКТУАЛЬНЫЕ ИБО НЕ СОВПАДАЕТ С МАКЕТОМ ВИЗУАЛЬНО*/
+}
+.details {
+  float:left;
+  width: 110px;
+}
+.booking {
+  margin-left: 6px;
+  float:left;
+  width: 142px;
+}
+.hotel-description {
+  margin-bottom: 11px; /*РАЗМЕРЫ НЕ АКТУАЛЬНЫЕ ИБО НЕ СОВПАДАЕТ С МАКЕТОМ ВИЗУАЛЬНО*/
+}
+.btn-blue {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #81b3d2;
+  padding: 4px 17px;
+  font-weight: bold;
+}
+.btn-brown {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #766357;
+  padding: 4px 17px;
+  font-weight: bold;
 }
 .aside {
   text-align: center;
   float:right;
   width:120px;
-  height: 95px;
 }
 .rating {
-width: 120px;
-height: 27px;
-margin-top: 47px;
-background-color: #e5e5e5;
+  width: 120px;
+  padding: 4px 13px 4px 16px;
+  margin-top: 47px;
+  background-color: #e5e5e5;
+  color: #666666;
 }
 .stars {
   text-align: right;
 }
-.details {
-  font-size: 14px;
-  text-transform: inherit;
-  float:left;
-  width: 130px;
-  height: 60px;
-}
-.booking {
-  font-size: 14px;
-  text-transform: inherit;
-  margin-left: 6px;
-  float:left;
-  width: 142px;
-  height: 60px;
-}
 
-.btn-blue {
-  font-size: 14px;
-  text-decoration: none;
-  width: 76px;
-  height: 11px;
-  color: white;
-  background-color: #81b3d2;
-  padding: 8px 17px;
-  font-weight: bold;
-}
-.btn-brown {
-  font-size: 14px;
-  text-decoration: none;
-  width: 108px;
-  height: 11px;
-  color: #ffffff;
-  background-color: #766357;
-  padding: 8px 17px;
-  font-weight: bold;
-}
-.hotel-description {
-  margin-bottom: 10px;
-}
 
 /* F O O T E R */
 
-.main-footer {
-  height: 120px;
+.main-footer-index {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.7;
+  font-size: 0;
+  background-color: #f9fbf6;
 }
-.footer-row{
-  text-transform: uppercase;
-  color: black;
-  height: 120px;
+.main-footer-hotel {
+  font-size: 0;
 }
 .footer-tag {
+  display: inline-block;
   text-align: center;
-  width: 400px;
-  height: 70px;
-  float: left;
-  padding-top: 50px;
+  vertical-align: middle;
+  width: 380px;
+  padding: 45px 10px;
   text-decoration: none;
 }
 .footer-tag a {
   text-decoration: none;
-  color: black;
+  font-size: 21px;
+  line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
   font-weight: bold;
 }
 .footer-social {
+  display: inline-block;
   text-align: center;
-  width: 400px;
-  padding-top: 36px;
-  height: 70px;
-  float: left;
+  vertical-align: middle;
+  width: 380px;
+  vertical-align: middle;
+  padding: 36px 10px;
 }
 .footer-social a {
   display: inline-block;
   width: 46px;
   height: 48px;
+  text-decoration: none;
+  margin-right: 6px;
   background-color: #81b3d2;
 }
 .footer-copyright {
-  text-align: left;;
-  width: 298px;
-  padding-top: 50px;
+  display: inline-block;
+  position: relative;
+  width: 288px;
+  padding: 48px 0px;
   padding-left: 102px;
-  height: 70px;
-  float: right;
-  background-image:  url("../img/htmlacademy.png");
-  background-repeat: no-repeat;
-  background-position: 68% 50%;
+  padding-right: 10px;
+  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: left;
+  vertical-align: bottom;
+}
+.footer-copyright a {
+  position: absolute;
+  width: 113px;
+  height: 39px;
+  background: url("../img/htmlacademy.png") no-repeat;
+  top: 41px;
+  left: 194px;
 }

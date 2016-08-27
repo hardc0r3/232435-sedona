@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -64,33 +66,29 @@
               </li>
             </ul>
           </div>
-          <div class="price">
-            <p class="filters-title">Стоимость в сутки(Р):</p>
-            <div class="input-price">
-              <div class="enter-price">
-                <label>
-                  От <input type="text" name="min-price" value="0">
-                </label>
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (Р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
               </div>
-              <div class="enter-price">
-                <label>
-                  До <input type="text" name="max-price" value="3000">
-                </label>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
               </div>
-            </div>
-            <div class="scroll">
-              СКРОЛЛ
-            </div>
-            <button class="show-button" type="submit" name="show">Показать</button>
+              <button class="btn-transparent" type="submit" name="show">Показать</button>
           </div>
         </form>
       </div>
       <div class="results-row">
         <div class="search-results">
-          Найдено:3
+          Найдено: 3
         </div>
         <div class="sort">
-          Сортировка
+          Сортировка:
         </div>
         <ul class="sort-list">
           <li class="active"><a>По цене</a></li>
@@ -104,7 +102,7 @@
       </div>
       <section class="hotel clearfix">
         <div class="hotel-image">
-          <img src="img/hotel-image-1.jpg" width="135" height="90">
+          <img src="img/hotel-image-1.jpg" alt="Картинка отеля" width="135" height="90">
         </div>
         <div class="hotel-content clearfix">
           <h2 class="hotel-title">Amara resort & spa</h2>
@@ -128,9 +126,9 @@
           <p class="rating">Рейтинг:8.5</p>
         </div>
       </section>
-      <section class="hotel">
+      <section class="hotel clearfix">
         <div class="hotel-image">
-          <img src="img/hotel-image-2.jpg" width="135" height="90">
+          <img src="img/hotel-image-2.jpg" alt="Картинка отеля" width="135" height="90">
         </div>
         <div class="hotel-content">
           <h2 class="hotel-title">Desert quail inn</h2>
@@ -154,9 +152,9 @@
           <p class="rating">Рейтинг:8.9</p>
         </div>
       </section>
-      <section class="hotel">
+      <section class="hotel clearfix">
         <div class="hotel-image">
-          <img src="img/hotel-image-3.jpg" width="135" height="90">
+          <img src="img/hotel-image-3.jpg" alt="Картинка отеля" width="135" height="90">
         </div>
         <div class="hotel-content">
           <h2 class="hotel-title">Desert quail inn</h2>
@@ -180,7 +178,7 @@
           <p class="rating">Рейтинг:9.2</p>
         </div>
       </section>
-      <footer class="main-footer">
+      <footer class="main-footer-hotel">
         <div class="footer-row">
           <div class="footer-tag">
             <a href="#" class="hashtag">#Visitsedona</a>

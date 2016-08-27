@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -31,7 +33,7 @@
       <main class="content">
         <div class="promo">
           <div class="promo-image">
-            <img src="img/promo-image.png" alt="Sedona" width="" height="">
+            <img src="img/promo-image.png" alt="Sedona" width="458" height="352">
           </div>
         </div>
         <article>
@@ -67,7 +69,7 @@
             </div>
           </div>
           <div class="reason-row reason-row--blue clearfix">
-            <div class="reason-image image-right">
+            <div class="reason-image">
               <img src="img/reason-image-2.jpg" width="800" height="256">
             </div>
             <div class="reason">
@@ -108,55 +110,55 @@
           <p class="reason-description reason-date">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a href="#" class="search-btn">Поиск гостиницы в Седоне</a>
         </div>
-      <div class="map">
-        <div class="form">
-          <form action="#" method="post">
-            <div class="form-line">
-              <label for="datacheckin">Дата заезда:</label>
-              <input type="text" name="datacheckin" id="datacheckin" value="24 апреля 2016">
-            </div>
-            <div class="form-line">
-              <label for="datacheckout">Дата выезда:</label>
-              <input type="text" name="datacheckout" id="datacheckout" value="4 июля 2016">
-            </div>
-            <div class="form-line">
-              <div class="adult-data">
-                <label for="adult">Взрослые:</label>
-                <div class="data-numbers">
-                  <button class="minus" type="button">-</button>
-                  <input type="text" name="adult" id="adult" value="2">
-                  <button class="plus" type="button">+</button>
+        <div class="map">
+          <div class="form">
+            <form action="#" method="post">
+              <div class="form-line">
+                <label for="datacheckin">Дата заезда:</label>
+                <input type="text" name="datacheckin" id="datacheckin" value="24 апреля 2016">
+              </div>
+              <div class="form-line">
+                <label for="datacheckout">Дата выезда:</label>
+                <input type="text" name="datacheckout" id="datacheckout" value="4 июля 2016">
+              </div>
+              <div class="form-line clearfix">
+                <div class="adult-data">
+                  <label for="adult">Взрослые:</label>
+                  <div class="data-numbers">
+                    <button class="minus" type="button">-</button>
+                    <input type="text" name="adult" id="adult" value="2">
+                    <button class="plus" type="button">+</button>
+                  </div>
+                </div>
+                <div class="child-data">
+                  <label for="child">Дети:</label>
+                  <div class="data-numbers">
+                    <button class="minus" type="button">-</button>
+                    <input type="text" name="child" id="child" value="0">
+                    <button class="plus" type="button">+</button>
+                  </div>
                 </div>
               </div>
-              <div class="child-data">
-                <label for="child">Дети:</label>
-                <div class="data-numbers">
-                  <button class="minus" type="button">-</button>
-                  <input type="text" name="child" id="child" value="0">
-                  <button class="plus" type="button">+</button>
-                </div>
-              </div>
-            </div>
-            <button class="btn-find" type="submit">Найти</button>
-          </form>
-        </div>
-        <footer class="main-footer">
-          <div class="footer-row">
-            <div class="footer-tag">
-              <a href="#" class="hashtag">#Visitsedona</a>
-            </div>
-            <div class="footer-social">
-              <a class="social-btn social-btn-vk" href="#">твит</a>
-              <a class="social-btn social-btn-fb" href="#">ФБ</a>
-              <a class="social-btn social-btn-inst" href="#">Ютуб</a>
-            </div>
-            <div class="footer-copyright">
-              Website by
-              <a class="btn-academy" href="https://htmlacademy.ru"></a>
-            </div>
+              <button class="btn-find" type="submit">Найти</button>
+            </form>
           </div>
-        </footer>
+          <footer class="main-footer-index">
+            <div class="footer-row">
+              <div class="footer-tag">
+                <a href="#" class="hashtag">#Visitsedona</a>
+              </div>
+              <div class="footer-social">
+                <a class="social-btn social-btn-vk" href="#">твит</a>
+                <a class="social-btn social-btn-fb" href="#">ФБ</a>
+                <a class="social-btn social-btn-inst" href="#">Ютуб</a>
+              </div>
+              <div class="footer-copyright">
+                Website by
+                <a class="btn-academy" href="https://htmlacademy.ru"></a>
+              </div>
+            </div>
+          </footer>
+        </div>
       </div>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
