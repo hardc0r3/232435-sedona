@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
@@ -15,17 +15,17 @@
         </div>
         <nav class="main-navigation">
           <ul class="navigation-list">
-            <li class="navigation-info navigation-item">
+            <li class="navigation-item">
               <a href="#">Информация</a>
             </li>
-            <li class="navigation-photo navigation-item">
+            <li class="navigation-item">
               <a href="#">Фото и видео</a>
             </li>
-            <li class="navigation-map navigation-item">
+            <li class="navigation-item">
               <a href="#">Карта штата</a>
             </li>
-            <li class="navigation-hotels navigation-item">
-              <a>Гостиницы</a>
+            <li class="navigation-item">
+              <span class="navigation-active">Гостиницы</span>
             </li>
           </ul>
         </nav>
@@ -96,8 +96,8 @@
           <li class="sort-item"><a href="#">По рейтингу</a></li>
         </ul>
         <div class="arrow">
-          <a>/\</a>
-          <a href="#">\/</a>
+          <a class="arrow-up" href="#"></a>
+          <a class="arrow-down"></a>
         </div>
       </div>
       <section class="hotel clearfix">
@@ -105,7 +105,9 @@
           <img src="img/hotel-image-1.jpg" alt="Картинка отеля" width="135" height="90">
         </div>
         <div class="hotel-content clearfix">
-          <h2 class="hotel-title">Amara resort & spa</h2>
+          <h2 class="hotel-title">
+            <a href="#" class="hotels-style">Amara resort & spa</a>
+          </h2>
           <div class="details">
             <div class="hotel-description">
               Гостиница
@@ -119,10 +121,8 @@
             <a href="#" class="btn-brown" type="submit">Забронировать</a>
           </div>
         </div>
-        <div class="aside">
-          <div class="stars">
-            * * * *
-          </div>
+        <div class="aside clearfix">
+          <div class="stars four-stars"></div>
           <p class="rating">Рейтинг:8.5</p>
         </div>
       </section>
@@ -131,7 +131,9 @@
           <img src="img/hotel-image-2.jpg" alt="Картинка отеля" width="135" height="90">
         </div>
         <div class="hotel-content">
-          <h2 class="hotel-title">Desert quail inn</h2>
+          <h2 class="hotel-title">
+            <a href="#" class="hotels-style">desert quail inn</a>
+          </h2>
           <div class="details">
             <div class="hotel-description">
               Мотель
@@ -146,9 +148,7 @@
           </div>
         </div>
         <div class="aside">
-          <div class="stars">
-            * *
-          </div>
+          <div class="two-stars"></div>
           <p class="rating">Рейтинг:8.9</p>
         </div>
       </section>
@@ -157,7 +157,9 @@
           <img src="img/hotel-image-3.jpg" alt="Картинка отеля" width="135" height="90">
         </div>
         <div class="hotel-content">
-          <h2 class="hotel-title">Desert quail inn</h2>
+          <h2 class="hotel-title">
+           <a href="#" class="hotels-style">villas at poco diablo</a>
+          </h2>
           <div class="details">
             <div class="hotel-description">
               Апартаменты
@@ -172,9 +174,7 @@
           </div>
         </div>
         <div class="aside">
-          <div class="stars">
-            * * *
-          </div>
+          <div class="three-stars"></div>
           <p class="rating">Рейтинг:9.2</p>
         </div>
       </section>
@@ -184,9 +184,9 @@
             <a href="#" class="hashtag">#Visitsedona</a>
           </div>
           <div class="footer-social">
-            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+            <a class="social-btn social-btn-tweet" href="#"></a>
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-ytube" href="#"></a>
           </div>
           <div class="footer-copyright">
             Website by

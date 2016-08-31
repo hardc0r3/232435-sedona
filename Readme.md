@@ -1,6 +1,6 @@
 # Личный проект «Седона»
 
-* Студент: [Бондарчук Павел](https://htmlacademy.ru/profile/id232435).
+* Студент: [Руслан Гришков](https://up.htmlacademy.ru/htmlcss/14/user/236749).
 * Наставник:[Анастасия Мусаэльян]https://htmlacademy.ru/profile/id124940
 
 ---

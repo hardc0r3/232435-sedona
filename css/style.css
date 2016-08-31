@@ -1,6 +1,6 @@
-/* {
+* {
   outline: 1px solid red;
-}*/
+}
 body {
   font-family: "PT sans Regular", "Arial", sans-serif;
   font-size: 14px;
@@ -8,6 +8,9 @@ body {
   color:#000000;
   text-transform: uppercase;
 }
+
+/*В Р А П П Е Р*/
+
 .wrapper {
   position: relative;
   width: 1200px;
@@ -56,6 +59,29 @@ body {
   text-decoration: none;
   line-height: 26px;
   font-weight: bold;
+}
+.navigation-item a:hover {
+  color: #81b3d2;
+}
+.navigation-item a:active {
+  color: #cacaca;
+}
+.navigation-item span {
+  display: inline-block;
+  font-family: "PT sans", "Arial", sans-serif;
+  font-size: 14px;
+  color: #766357;
+  text-decoration: none;
+  line-height: 26px;
+  font-weight: bold;
+}
+.navigation-item span:hover {
+  cursor: pointer;
+  color: #604e43;
+}
+.navigation-item span:active {
+  cursor: pointer;
+  color: #dbd8d5;
 }
 .logo {
   position: absolute;
@@ -106,10 +132,10 @@ article {
   margin-bottom: 33px;
 }
 .reason-row {
-  font-size: 0; /* нужно ли здесь это свойство*/
+  font-size: 0;
 }
 .reason-row-icon {
-  font-size: 0; /* нужно ли здесь это свойство*/
+  font-size: 0;
 }
 .reason-row--blue {
   height: 256px;
@@ -119,19 +145,18 @@ article {
 .reason {
   display: inline-block;
   width: 300px;
-  text-align: center;
   vertical-align: middle;
   padding: 40px 50px;
 }
 .reason-number {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 19px;
 }
 .reason .reason-title{
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 21px;
 }
 .reason-row--blue .reason-description {
   color: #ffffff;
@@ -269,13 +294,22 @@ article {
   outline: none;
   background-color: #f2f2f2;
   font-weight: inherit;
-  width: 316px;
+  width: 296px;
   float: right;
-  padding: 8px 15px;
+  padding: 8px 35px 8px 15px;
   margin-left: 18px;
+  background-color: #f2f2f2;
+}
+.form-line input:hover {
+  background-color: #ebebeb;
+}
+.form-line input:active {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  padding: 6px 33px 6px 13px;
 }
 .form-line label {
-  padding: 8px 0px; /*выровняли вручную, как сделать автоматически расскажи */
+  padding: 8px 0px;
   display: inline-block;
 }
 .data-numbers input[type=text] {
@@ -284,6 +318,28 @@ article {
   display: block;
   width: 8px;
   padding: 6px 15px;
+  background-color: #f2f2f2;
+}
+.enter-data {
+  position: relative;
+}
+.enter-data::before {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  right: 9px;
+  top: 10px;
+  width: 21px;
+  height: 22px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -593px -5px;
+}
+.enter-data:hover::before {
+  background-position: -273px -5px;
+}
+.enter-data:active::before {
+  background-position: -389px -5px;
 }
 .adult-data {
   width: 225px;
@@ -298,22 +354,64 @@ article {
   float: right;
 }
 .minus {
+  position: relative;
   border: none;
   outline: none;
   width: 38px;
   height: 38px;
   float: left;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.minus::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 3px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -624px -5px;
+}
+.minus:hover::before {
+  background-position: -304px -5px;
+}
+.minus:active::before {
+  background-position: -420px -5px;
 }
 .data-numbers input[type=text] {
   float: left;
   margin: 0;
 }
 .plus {
+  position: relative;
   border: none;
   outline: none;
   width: 38px;
   height: 38px;
   float: left;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.plus::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -646px -5px;
+}
+.plus:hover::before {
+  background-position: -326px -5px;
+}
+.plus:active::before {
+  background-position: -442px -5px;
 }
 .child-data label {
   margin-left: 50px;
@@ -336,13 +434,20 @@ article {
   padding: 16px 0;
   margin-top: 21px;
 }
+.btn-find:hover {
+  background-color: #669ec0;
+}
+.btn-find:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
 
 /*F I L T E R S*/
 
 .filters-row {
   font-family: "PT Sans", sans-serif;
   height: 177px;
-  background-image: url("../img/filterbackground.jpg"); /* не вытягивается на полный размер, остается незекрытый кусок*/
+  background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
   padding: 28px 72px;
   color: #ffffff;
@@ -368,9 +473,42 @@ article {
   padding: 0;
   list-style: none;
 }
-.filters-item input {
-  margin-right: 19px;
-  margin-bottom: 23px;
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  margin: 23px 0;
+  line-height: 21px;
+  padding-left: 40px;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 24px;
+  height: 22px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -463px -5px;
+}
+.filters-item input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 24px;
+  height: 22px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -495px -5px;
+}
+input[type="checkbox"] + label:hover::before {
+
 }
 .filter-range {
   font-family: "PT Sans Regular", "Arial", sans-serif;
@@ -531,15 +669,70 @@ article {
   color: #81b3d2;
   border-bottom: none;
 }
+.sort-item a:hover {
+  color: #81b3d2;
+}
+.sort-item a:active {
+  color: #000000;
+  border: none;
+}
 .arrow {
   float:right;
-  width: 40px;
-  height: 40px;
-  font-size: 12px;
-  text-align: center;
-  vertical-align: middle;
+  width: 36px;
+  height: 11px;
+  margin-top: 15px;
 }
-
+.arrow-up {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  cursor: pointer;
+}
+.arrow-up::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 10px;
+  background-position: -572px -5px;
+}
+.arrow-up:hover::before {
+  width: 11px;
+  height: 10px;
+  background-position: -252px -5px;
+}
+.arrow-up:active::before {
+  width: 11px;
+  height: 10px;
+  background-position: -368px -5px;
+}
+.arrow-down {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.arrow-down::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 10px;
+  background-position: -347px -5px;
+}
 /*О Т Е Л И*/
 
 .hotel {
@@ -563,13 +756,28 @@ article {
   float:left;
   margin-left: 30px;
 }
-.hotel-title {  /*Как выровнять ХОТЕЛТАЙТОЛ и КНОПОЩКЕ*/
+.hotel-title {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 3px; /*РАЗМЕРЫ НЕ АКТУАЛЬНЫЕ ИБО НЕ СОВПАДАЕТ С МАКЕТОМ ВИЗУАЛЬНО*/
+  margin-bottom: 6px;
+  margin-top: -4px;
+}
+.hotels-style {
+  text-decoration: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+.hotels-style:hover {
+  color: #81b3d2;
+}
+.hotels-style:active {
+  color: #cacaca;
 }
 .details {
   float:left;
@@ -581,7 +789,7 @@ article {
   width: 142px;
 }
 .hotel-description {
-  margin-bottom: 11px; /*РАЗМЕРЫ НЕ АКТУАЛЬНЫЕ ИБО НЕ СОВПАДАЕТ С МАКЕТОМ ВИЗУАЛЬНО*/
+  margin-bottom: 12px;
 }
 .btn-blue {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -596,6 +804,13 @@ article {
   padding: 4px 17px;
   font-weight: bold;
 }
+.btn-blue:hover {
+  background: #669ec0;
+}
+.btn-blue:active {
+  background: #5496bd;
+  color: #88b6d1;
+}
 .btn-brown {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -609,20 +824,78 @@ article {
   padding: 4px 17px;
   font-weight: bold;
 }
+.btn-brown:hover {
+  background: #604e43;
+}
+.btn-brown:active {
+  background: #503e33;
+  color: #857871;
+}
 .aside {
   text-align: center;
   float:right;
-  width:120px;
 }
 .rating {
+  margin: 0;
   width: 120px;
   padding: 4px 13px 4px 16px;
-  margin-top: 47px;
+  margin-top: 61px;
   background-color: #e5e5e5;
   color: #666666;
 }
-.stars {
-  text-align: right;
+.four-stars {
+  position: relative;
+  width: 89px;
+  height: 17px;
+  float: right;
+}
+.four-stars::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 89px;
+  height: 17px;
+  background-position: -132px -5px;
+}
+.three-stars {
+  float: right;
+  position: relative;
+  width: 64px;
+  height: 17px;
+}
+.three-stars::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 17px;
+  background-position: -57px -5px;
+}
+.two-stars {
+  float: right;
+  position: relative;
+  width: 40px;
+  height: 17px;
+}
+.two-stars::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 17px;
+  background-position: -5px -5px;
 }
 
 
@@ -657,24 +930,63 @@ article {
 .footer-social {
   display: inline-block;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
   width: 380px;
-  vertical-align: middle;
   padding: 36px 10px;
 }
-.footer-social a {
+.footer-social .social-btn  {
+  position: relative;
   display: inline-block;
+  vertical-align: top;
   width: 46px;
   height: 48px;
   text-decoration: none;
   margin-right: 6px;
   background-color: #81b3d2;
 }
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+.social-btn:hover {
+  background-color: #669ec0;
+}
+.social-btn:active {
+  background-color: #5496bd;
+}
+.social-btn-tweet::before {
+  width: 17px;
+  height: 15px;
+  background-position: -1036px -5px;
+}
+.social-btn-tweet:active::before {
+  opacity: 0.3;
+}
+.social-btn-fb::before {
+  width: 10px;
+  height: 19px;
+  background-position: -531px -5px;
+}
+.social-btn-fb:active::before {
+  opacity: 0.3;
+}
+.social-btn-ytube:active::before {
+  opacity: 0.3;
+}
+.social-btn-ytube::before {
+  width: 20px;
+  height: 16px;
+  background-position: -1063px -5px;
+}
 .footer-copyright {
   display: inline-block;
-  position: relative;
   width: 288px;
-  padding: 48px 0px;
+  padding: 41px 0px;
   padding-left: 102px;
   padding-right: 10px;
   font-family: "PT Sans Regular", "Arial", sans-serif;
@@ -683,11 +995,32 @@ article {
   text-align: left;
   vertical-align: bottom;
 }
-.footer-copyright a {
-  position: absolute;
+.footer-copyright .btn-academy {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   width: 113px;
   height: 39px;
-  background: url("../img/htmlacademy.png") no-repeat;
-  top: 41px;
-  left: 194px;
+}
+.btn-academy::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 113px;
+  height: 39px;
+  background-position: -667px -5px;
+}
+.btn-academy:hover::before {
+  width: 113px;
+  height: 39px;
+  background-position: -790px -5px;
+}
+.btn-academy:active::before {
+  width: 113px;
+  height: 39px;
+  background-position: -913px -5px;
 }
