@@ -2,10 +2,11 @@
   outline: 1px solid red;
 }
 body {
-  font-family: "PT sans Regular", "Arial", sans-serif;
+  font-family: "PT sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color:#000000;
+  background-color: #939393;
   text-transform: uppercase;
 }
 
@@ -15,6 +16,8 @@ body {
   position: relative;
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 0 40px #f2f2f2;
+  background-color: #ffffff;
 }
 
 /* З А Г О Л О В К И */
@@ -51,6 +54,7 @@ body {
 
 .main-header {
   position: relative;
+  background-color: #ffffff;
 }
 .navigation-item a {
   font-family: "PT sans", "Arial", sans-serif;
@@ -66,22 +70,15 @@ body {
 .navigation-item a:active {
   color: #cacaca;
 }
-.navigation-item span {
-  display: inline-block;
-  font-family: "PT sans", "Arial", sans-serif;
-  font-size: 14px;
-  color: #766357;
-  text-decoration: none;
-  line-height: 26px;
-  font-weight: bold;
-}
-.navigation-item span:hover {
+a.navigation-link {
+  color: #755357;
   cursor: pointer;
+}
+a.navigation-link:hover{
   color: #604e43;
 }
-.navigation-item span:active {
-  cursor: pointer;
-  color: #dbd8d5;
+a.navigation-link:active {
+  color: #dbd8b5;
 }
 .logo {
   position: absolute;
@@ -109,6 +106,7 @@ li:nth-child(2) {
 /*P R O M O*/
 
 .promo {
+  position: relative;
   background: url("../img/bg-photo-index.jpg") no-repeat;
   height:428px;
   padding-top: 76px;
@@ -119,6 +117,16 @@ li:nth-child(2) {
   width: 458px;
   height: 352px;
 }
+.promo::after {
+  position: absolute;
+  content: "";
+  background: url("../img/promo-down.png") no-repeat;
+  height: 57px;
+  width: 1200px;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%);
+}
 article {
   text-align: center;
 }
@@ -127,6 +135,7 @@ article {
   text-align: center;
   padding: 62px 330px 55px;
   vertical-align: top;
+  background-color: #ffffff;
 }
 .title {
   margin-bottom: 33px;
@@ -136,6 +145,7 @@ article {
 }
 .reason-row-icon {
   font-size: 0;
+  background-color: #ffffff;
 }
 .reason-row--blue {
   height: 256px;
@@ -143,10 +153,11 @@ article {
   background-color: #81b3d2;
 }
 .reason {
+  box-sizing: border-box;
   display: inline-block;
-  width: 300px;
+  width: 400px;
   vertical-align: middle;
-  padding: 40px 50px;
+  padding: 40px 48px;
 }
 .reason-number {
   margin-bottom: 24px;
@@ -235,6 +246,7 @@ article {
 .search {
   text-align: center;
   padding-top: 55px;
+  background-color: #ffffff;
 }
 .question {
   margin-bottom: 30px;
@@ -303,7 +315,7 @@ article {
 .form-line input:hover {
   background-color: #ebebeb;
 }
-.form-line input:active {
+.form-line input:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   padding: 6px 33px 6px 13px;
@@ -319,6 +331,14 @@ article {
   width: 8px;
   padding: 6px 15px;
   background-color: #f2f2f2;
+}
+.data-numbers input[type=text]:hover{
+  background-color: #ebebeb;
+}
+.data-numbers input[type=text]:focus{
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  padding: 4px 13px;
 }
 .enter-data {
   position: relative;
@@ -607,12 +627,10 @@ input[type="checkbox"] + label:hover::before {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
-
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -677,66 +695,54 @@ input[type="checkbox"] + label:hover::before {
   border: none;
 }
 .arrow {
+  position: relative;
   float:right;
   width: 36px;
   height: 11px;
   margin-top: 15px;
 }
 .arrow-up {
-  position: relative;
+  position: absolute;
   vertical-align: top;
   display: inline-block;
   width: 11px;
   height: 10px;
   cursor: pointer;
-}
-.arrow-up::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
-  width: 11px;
-  height: 10px;
   background-position: -572px -5px;
 }
-.arrow-up:hover::before {
+.arrow-up:hover {
   width: 11px;
   height: 10px;
   background-position: -252px -5px;
 }
-.arrow-up:active::before {
+.arrow-up:active {
   width: 11px;
   height: 10px;
   background-position: -368px -5px;
 }
 .arrow-down {
-  position: relative;
+  position: absolute;
   vertical-align: top;
   display: inline-block;
   width: 11px;
   height: 10px;
   cursor: pointer;
   margin-left: 12px;
-}
-.arrow-down::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
-  width: 11px;
-  height: 10px;
   background-position: -347px -5px;
 }
+
 /*О Т Е Л И*/
 
 .hotel {
-  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: #333333;
@@ -756,22 +762,15 @@ input[type="checkbox"] + label:hover::before {
   float:left;
   margin-left: 30px;
 }
-.hotel-title {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 6px;
-  margin-top: -4px;
-}
 .hotels-style {
+  display: block;
   text-decoration: none;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+  margin-bottom: 7px;
 }
 .hotels-style:hover {
   color: #81b3d2;
@@ -789,7 +788,7 @@ input[type="checkbox"] + label:hover::before {
   width: 142px;
 }
 .hotel-description {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 .btn-blue {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -801,7 +800,7 @@ input[type="checkbox"] + label:hover::before {
   cursor: pointer;
   color: #ffffff;
   background-color: #81b3d2;
-  padding: 4px 17px;
+  padding: 3px 17px;
   font-weight: bold;
 }
 .btn-blue:hover {
@@ -821,7 +820,7 @@ input[type="checkbox"] + label:hover::before {
   cursor: pointer;
   color: #ffffff;
   background-color: #766357;
-  padding: 4px 17px;
+  padding: 3px 17px;
   font-weight: bold;
 }
 .btn-brown:hover {
@@ -832,6 +831,7 @@ input[type="checkbox"] + label:hover::before {
   color: #857871;
 }
 .aside {
+  position: relative;
   text-align: center;
   float:right;
 }
@@ -844,69 +844,43 @@ input[type="checkbox"] + label:hover::before {
   color: #666666;
 }
 .four-stars {
-  position: relative;
+  position: absolute;
   width: 89px;
   height: 17px;
-  float: right;
-}
-.four-stars::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
-  width: 89px;
-  height: 17px;
   background-position: -132px -5px;
 }
 .three-stars {
-  float: right;
-  position: relative;
   width: 64px;
   height: 17px;
-}
-.three-stars::before {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
-  width: 65px;
-  height: 17px;
   background-position: -57px -5px;
 }
 .two-stars {
-  float: right;
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 17px;
-}
-.two-stars::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
-  width: 42px;
-  height: 17px;
   background-position: -5px -5px;
 }
-
 
 /* F O O T E R */
 
 .main-footer-index {
   position: absolute;
   bottom: 0;
-  opacity: 0.7;
   font-size: 0;
-  background-color: #f9fbf6;
+  background: rgba(249, 251, 246, .9);
 }
 .main-footer-hotel {
   font-size: 0;
@@ -989,11 +963,11 @@ input[type="checkbox"] + label:hover::before {
   padding: 41px 0px;
   padding-left: 102px;
   padding-right: 10px;
-  font-family: "PT Sans Regular", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   text-align: left;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .footer-copyright .btn-academy {
   position: relative;
