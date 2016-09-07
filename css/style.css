@@ -1,13 +1,14 @@
-* {
+/* {
   outline: 1px solid red;
-}
+}*/
 body {
   font-family: "PT sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color:#000000;
-  background-color: #939393;
   text-transform: uppercase;
+  background-color: #f2f2f2;
+  background-size: 1220px;
 }
 
 /*В Р А П П Е Р*/
@@ -16,8 +17,8 @@ body {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 0 40px #f2f2f2;
   background-color: #ffffff;
+  box-shadow: 0 -5px 9px 2px #dbdbdb;
 }
 
 /* З А Г О Л О В К И */
@@ -84,6 +85,7 @@ a.navigation-link:active {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
+  z-index: 1;
 }
 .main-navigation ul {
   padding: 0;
@@ -133,12 +135,12 @@ article {
 .header-title {
   display: inline-block;
   text-align: center;
-  padding: 62px 330px 55px;
+  padding: 46px 320px 38px;
   vertical-align: top;
   background-color: #ffffff;
 }
 .title {
-  margin-bottom: 33px;
+  margin-bottom: 27px;
 }
 .reason-row {
   font-size: 0;
@@ -175,6 +177,17 @@ article {
 .reason-row--grey {
   background-color: #eeeeee;
 }
+.reason-row--grey .reason {
+  padding-top: 27px;
+}
+.reason-row--grey .reason-number {
+  margin-top: 25px;
+}
+.reason-row--grey .reason {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 43px;
+}
 .reason .reason-description {
   font-size: 14px;
   line-height: 21px;
@@ -189,63 +202,69 @@ article {
 }
 .reason-icon--house {
   position: relative;
-  padding-bottom: 85px;
+  padding-bottom: 68px;
 }
 .reason-icon--house .reason-title {
-  margin-top: 150px;
-  margin-bottom: 28px;
+  margin-top: 120px;
+  margin-bottom: 25px;
 }
 .reason-icon--house::before {
   content: "";
   position: absolute;
-  top: 60px;
-  left: 162px;
+  right: 50%;
+  left: 50%;
+  top: 28%;
+  transform: translate(-50%, -50%);
   width: 75px;
   height: 72px;
-  background: url("../img/reason-icon--house.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -1177px -5px;
 }
 .reason-icon--food .reason-title {
-  margin: 0;
-  margin-top: 150px;
+  margin-top: 118px;
   margin-bottom: 28px;
 }
 .reason-icon--food {
   position: relative;
-  padding-bottom: 85px;
+  padding-bottom: 68px;
 }
 .reason-icon--food::before {
   content: "";
   position: absolute;
-  top: 61px;
-  left: 163px;
+  right: 50%;
+  left: 50%;
+  top: 28%;
+  transform: translate(-50%, -50%);
   width: 74px;
   height: 70px;
-  background: url("../img/reason-icon--food.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -1093px -5px;
 }
 .reason-icon--souvenirs .reason-title {
-  margin-top: 150px;
-  margin-bottom: 28px;
+  margin-top: 120px;
+  margin-bottom: 24px;
 }
 .reason-icon--souvenirs {
   position: relative;
-  padding-bottom: 85px;
+  padding-bottom: 68px;
 }
 .reason-icon--souvenirs::before {
   content: "";
   position: absolute;
-  top: 56px;
-  left: 168px;
+  right: 50%;
+  left: 50%;
+  top: 28%;
+  transform: translate(-50%, -50%);
   width: 64px;
   height: 76px;
-  background: url("../img/reason-icon--souvenirs.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -1262px -5px;
 }
-
-
 /*S E A R C H*/
 
 .search {
   text-align: center;
-  padding-top: 55px;
+  padding-top: 33px;
   background-color: #ffffff;
 }
 .question {
@@ -270,7 +289,7 @@ article {
   background-color: #766357;
   color: #ffffff;
   padding: 30px 0;
-  margin-top: 50px;
+  margin-top: 33px;
 }
 .map {
   position: relative;
@@ -298,7 +317,7 @@ article {
 }
 .form-line {
   box-sizing: border-box;
-  margin-bottom: 29px;
+  margin-bottom: 24px;
   text-align: left;
 }
 .form-line input[type=text] {
@@ -452,7 +471,7 @@ article {
   color: #ffffff;
   width: 458px;
   padding: 16px 0;
-  margin-top: 21px;
+  margin-top: 28px;
 }
 .btn-find:hover {
   background-color: #669ec0;
@@ -646,7 +665,8 @@ input[type="checkbox"] + label:hover::before {
 
 .results-row {
   font-size: 0;
-  padding: 32px 72px; /*почему в ФШ показывает одно расстояние padding, а в браузере по факту получается другое?*/
+  padding: 15px 72px;
+  padding-bottom: 30px;
 }
 .search-results {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -771,6 +791,7 @@ input[type="checkbox"] + label:hover::before {
   font-weight: bold;
   color: #000000;
   margin-bottom: 7px;
+  margin-top: -5px;
 }
 .hotels-style:hover {
   color: #81b3d2;
@@ -837,7 +858,7 @@ input[type="checkbox"] + label:hover::before {
 }
 .rating {
   margin: 0;
-  width: 120px;
+  width: 85px;
   padding: 4px 13px 4px 16px;
   margin-top: 61px;
   background-color: #e5e5e5;
@@ -958,6 +979,7 @@ input[type="checkbox"] + label:hover::before {
   background-position: -1063px -5px;
 }
 .footer-copyright {
+  position: relative;
   display: inline-block;
   width: 288px;
   padding: 41px 0px;
@@ -973,13 +995,8 @@ input[type="checkbox"] + label:hover::before {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 113px;
-  height: 39px;
-}
-.btn-academy::before {
-  content: "";
   position: absolute;
-  left: 50%;
+  left: 60%;
   top: 50%;
   transform: translate(-50%, -50%);
   background-image: url("../img/spritesheet.png");
@@ -988,12 +1005,12 @@ input[type="checkbox"] + label:hover::before {
   height: 39px;
   background-position: -667px -5px;
 }
-.btn-academy:hover::before {
+.btn-academy:hover{
   width: 113px;
   height: 39px;
   background-position: -790px -5px;
 }
-.btn-academy:active::before {
+.btn-academy:active {
   width: 113px;
   height: 39px;
   background-position: -913px -5px;
