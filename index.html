@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -42,7 +42,7 @@
               заслуживающий большего!</h1>
             <p class="reason-description">Рассмотрим 5 причин,по которым Седона лучше чем Гранд Каньон!</p>
           </header>
-          <div class="reason-row reason-row--blue clearfix">
+          <div class="reason-row reason-row--blue">
             <div class="reason">
               <h2 class="reason-title">Настоящий городок</h2>
               <div class="reason-number">
@@ -68,12 +68,12 @@
               <p class="reason-description">Не только китайского,но и местного производства!</p>
             </div>
           </div>
-          <div class="reason-row reason-row--blue clearfix">
+          <div class="reason-row reason-row--blue">
             <div class="reason-image">
               <img src="img/reason-image-2.jpg" alt="picture" width="800" height="256">
             </div>
             <div class="reason">
-              <h2 class="reason-title">Там есть<br>мост дьявола</h2>
+              <h2 class="reason-title">Там есть мост дьявола</h2>
               <div class="reason-number">
                 — №2 —
               </div>
@@ -89,7 +89,7 @@
               <p class="reason-description">Все достопримечательности находятся очень близко</p>
             </div>
             <div class="reason">
-              <h2 class="reason-title">Красивая<br> дорога</h2>
+              <h2 class="reason-title">Красивая дорога</h2>
               <div class="reason-number">
                 — №4 —
               </div>
@@ -116,12 +116,14 @@
               <div class="form-line enter-data">
                 <label for="datacheckin">Дата заезда:</label>
                 <input type="text" name="datacheckin" id="datacheckin" value="24 АПРЕЛЯ 2016">
+                <div class="calendar"></div>
               </div>
               <div class="form-line enter-data">
                 <label for="datacheckout">Дата выезда:</label>
                 <input type="text" name="datacheckout" id="datacheckout" value="4 ИЮЛЯ 2016">
+                <div class="calendar"></div>
               </div>
-              <div class="form-line clearfix">
+              <div class="form-line">
                 <div class="adult-data">
                   <label for="adult">Взрослые:</label>
                   <div class="data-numbers">
