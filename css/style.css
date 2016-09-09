@@ -176,6 +176,7 @@ article {
 }
 
 .reason-row--blue {
+  overflow: hidden;
   height: 256px;
   color: #ffffff;
   background-color: #81b3d2;
@@ -185,7 +186,7 @@ article {
   box-sizing: border-box;
   display: inline-block;
   width: 400px;
-  vertical-align: middle;
+  vertical-align: top;
   padding: 40px 48px;
 }
 
@@ -364,6 +365,10 @@ article {
   line-height: 26px;
   font-weight: bold;
   top: 0;
+}
+
+.form-show {
+  display: block;
 }
 
 .form-line {
@@ -547,7 +552,7 @@ article {
   color: #ffffff;
   width: 458px;
   padding: 16px 0;
-  margin-top: 28px;
+  margin-top: 55px;
 }
 
 .btn-find:hover {
@@ -695,6 +700,7 @@ input[type="checkbox"]+label::before {
 .range-controls {
   position: relative;
   margin-bottom: 32px;
+  margin-left: 12px;
 }
 
 .range-controls .scale {
@@ -887,6 +893,7 @@ input[type="checkbox"]+label::before {
 .hotel-content {
   float: left;
   margin-left: 30px;
+  width: 700px;
 }
 
 .hotels-style {

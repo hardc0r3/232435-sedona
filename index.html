@@ -73,7 +73,7 @@
               <img src="img/reason-image-2.jpg" alt="picture" width="800" height="256">
             </div>
             <div class="reason">
-              <h2 class="reason-title">Там есть мост дьявола</h2>
+              <h2 class="reason-title">Там есть<br> мост дьявола</h2>
               <div class="reason-number">
                 — №2 —
               </div>
@@ -96,7 +96,7 @@
               <p class="reason-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
             <div class="reason">
-              <h2 class="reason-title">Мало<br>туристов</h2>
+              <h2 class="reason-title">Мало туристов</h2>
               <div class="reason-number">
                 — №5 —
               </div>
@@ -160,5 +160,14 @@
           </footer>
         </div>
       </div>
+    <script>
+      var link=document.querySelector(".search-btn");
+      var popup=document.querySelector(".form");
+
+      link.addEventListener("click", function(event){
+        event.preventDefault();
+        popup.classlist.toggle("form-show");
+      })
+    </script>
     </body>
   </html>
