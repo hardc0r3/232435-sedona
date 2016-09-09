@@ -353,6 +353,7 @@ article {
 /* Ф О Р М А*/
 
 .form {
+  display: none;
   box-sizing: border-box;
   position: absolute;
   width: 568px;
