@@ -127,12 +127,12 @@ li:nth-child(2) {
 
 .promo {
   position: relative;
-  background: url("../img/bg-photo-index.jpg") no-repeat;
+  background: #213442 url("../img/bg-photo-index.jpg") no-repeat;
   height: 428px;
   padding-top: 76px;
 }
 
-.promo-image img {
+.promo img {
   display: block;
   margin: 0 auto;
   width: 458px;
@@ -251,10 +251,9 @@ article {
 .reason-icon--house::before {
   content: "";
   position: absolute;
-  right: 50%;
+  transform: translateX(-50%);
   left: 50%;
-  top: 28%;
-  transform: translate(-50%, -50%);
+  top: 60px;
   width: 75px;
   height: 72px;
   background: url("../img/spritesheet.png") no-repeat;
@@ -274,10 +273,9 @@ article {
 .reason-icon--food::before {
   content: "";
   position: absolute;
-  right: 50%;
   left: 50%;
-  top: 28%;
-  transform: translate(-50%, -50%);
+  top: 60px;
+  transform: translateX(-50%);
   width: 74px;
   height: 70px;
   background: url("../img/spritesheet.png") no-repeat;
@@ -297,10 +295,9 @@ article {
 .reason-icon--souvenirs::before {
   content: "";
   position: absolute;
-  right: 50%;
   left: 50%;
-  top: 28%;
-  transform: translate(-50%, -50%);
+  top: 58px;
+  transform: translateX(-50%);
   width: 64px;
   height: 76px;
   background: url("../img/spritesheet.png") no-repeat;
@@ -344,7 +341,7 @@ article {
 
 .map {
   position: relative;
-  background-image: url("../img/map.jpg");
+  background: #cbdda9 url("../img/map.jpg") no-repeat;
   width: 1200px;
   height: 593px;
 }
@@ -479,9 +476,8 @@ article {
 .minus::before {
   position: absolute;
   content: "";
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
+  top: 17px;
+  left: 15px;
   width: 12px;
   height: 3px;
   background-image: url("../img/spritesheet.png");
@@ -516,9 +512,8 @@ article {
 .plus::before {
   position: absolute;
   content: "";
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
+  left: 15px;
+  top: 13px;
   width: 12px;
   height: 12px;
   background-image: url("../img/spritesheet.png");
@@ -570,8 +565,7 @@ article {
 
 .filters-row {
   height: 177px;
-  background-image: url("../img/filter-background.jpg");
-  background-repeat: no-repeat;
+  background: url("../img/filter-background.jpg") no-repeat;
   padding: 23px 72px;
   color: #ffffff;
   font-weight: bold;
